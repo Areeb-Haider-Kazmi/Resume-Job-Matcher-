@@ -49,7 +49,7 @@ def compute_similarity_bert(resume_text, jd_text):
 def preprocess(text):
     # Lowercase, remove stopwords, simple word split
     text = text.lower()
-    tokens = text.split()  # no punkt needed
+    tokens = text.split()  
     tokens = [lemmatizer.lemmatize(word) for word in tokens if word.isalnum() and word not in stop_words]
     return " ".join(tokens)
 
